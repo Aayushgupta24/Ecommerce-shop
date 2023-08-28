@@ -47,27 +47,3 @@ if (process.env.NODE_ENV === "production") {
 Run the server in production mode(simulator):
 
     $ npm start
-
-## Deploying to Heroku
-
-On the root, create a `Procfile` file:
-
-> Tells heroku how to run the project on the server.
-
-Add the following to the file:
-
-    $ web: node server/app.js
-
-Create a `heroku-postbuild` script in `package.json`:
-
-    $ "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-
-Add environment variables to Heroku's Config Vars.
-
-## Bugs
-
-1. File Uploads
-
-## Working Updates
-
-1. Re-write on Typescript
